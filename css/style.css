@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu-logo{
+    width: auto;
+    height: 89px;
+
+    background: #404EED;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 80px;
+}
+
+
+
+/* menu de escolhas */
+
+.conteudo{
+    width: auto;
+    height: auto;
+
+    background-color: red;
+
+    display: flex;
+}
+
+
+.ilustracao{
+    width: 683px;
+    height: 785px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #404EED;
+}
+/* escolhas*/
+.modelos{
+    width: 683px;
+    height: 785px;
+
+    background-color: #FFFFFF;
+    
+    
+}
+.escolha{
+    width: 500px;
+    height: 100px;
+
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 90px;
+   
+
+}
+.escolha1{
+    width: 500px;
+    height: 100px;
+
+    background-color: blue;
+}
+.escolha2{
+    width: 500px;
+    height: 100px;
+
+    background-color: brown;
+}
+
+.borda{
+    width: 100px;
+    height: 100px;
+
+    background-color: #F2F2F2;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.titulo{
+    width: 500px;
+    height: 21px;
+
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 90px;
+    
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #232323;
+}
+
+h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #232323;
+
+}
+.titulo1{
+    margin-left: 120px;
+    font-size: 18px;
+    color: #232323;
+    margin-top: 20px;
+}
+
+.pedido{
+    width: 500px;
+    height: 100px;
+
+    background-color: #FFFFFF;
+    margin-left: 130px;
+}
+
+.confirmar{
+    width: 398.61px;
+    height: 40px;
+
+    background: #C4C4C4;
+    border-radius: 10px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 130px;
+}
+
+input {
+    width: 396.27px;
+    height: 40px;
+
+    background: #F2F2F2;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Pedidos do usuario*/
+
+.pedidos-usuario{
+    width: auto;
+    height:  342px;
+    background-color:  #F2F2F2;;
+}
+.tituloPedido{
+    margin-left: 130px;
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.colecao{
+    margin-top: 10px;
+    margin-left: 130px;
+    width: 1000px;
+    height: auto;
+
+    background-color: FFFFFF;
+    display: flex;
+}
+
+.card{
+    Width:201.69px;
+    Height:236.47px;
+
+    background:  #FFFFFF;;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
