@@ -49,7 +49,7 @@ body {
     
     
 }
-.escolha{
+.escolha, .gola, .tecido{
     width: 500px;
     height: 100px;
 
@@ -180,5 +180,13 @@ input {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+}
+
+.selecionado{
+    border: 3px solid #404EED;
+}
+
+.botaoSelecionado{
+    background: #404EED;
 }
 
