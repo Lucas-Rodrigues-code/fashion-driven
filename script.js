@@ -29,7 +29,7 @@ function modeloSelecionado(escolhido){
 
     modeloEscolhido = document.querySelector(".selecionado .h1t").innerHTML
     console.log(modeloEscolhido)
-    confirmarPedido()
+    liberarPedido()
 }
 
 function golaSelecionada(golaEscolhida){
@@ -45,7 +45,7 @@ function golaSelecionada(golaEscolhida){
     gola = document.querySelector(".selecionado .h1").innerHTML
     console.log(golaEscolhida)
 
-    confirmarPedido()
+    liberarPedido()
 }
 function tecidoSelecionado(tecidoEscolhido){
     const tecidoSelecionadoAnterior = document.querySelector(".tecido .selecionado")
@@ -60,20 +60,22 @@ function tecidoSelecionado(tecidoEscolhido){
     tecido = document.querySelector(".selecionado .h1.o").innerHTML
     console.log(tecidoEscolhido)
 
-    confirmarPedido()
+    liberarPedido()
 }
 let inputPreenchido = "";
 function pegarMensagem(){
     inputPreenchido = document.querySelector("input").value
     if(possuiClasse1 === true && possuiClasse2 === true && possuiClasse3 === true ){
     
-    confirmarPedido()
-}
-console.log(inputPreenchido)
+    liberarPedido()
 }
 
-console.log(inputPreenchido)
-function confirmarPedido(){
+}
+
+
+
+
+function liberarPedido(){
     if(modeloEscolhido === "Camiseta" )modeloEscolhido = "top-tank"
     if(modeloEscolhido === "T-shirt" )modeloEscolhido = "t-shirt" 
     if(modeloEscolhido === "Manga longa" )modeloEscolhido = "long"
@@ -90,37 +92,69 @@ function confirmarPedido(){
     if(possuiClasse1 === true && possuiClasse2 === true && possuiClasse3 === true && inputPreenchido !== ""){
         const botaoSelecionado = document.querySelector(".confirmar")
         botaoSelecionado.classList.add("botaoSelecionado")
-        
-    dados = {
-            model: `${modeloEscolhido}`,
-            neck: `${gola}`,
-            material: `${tecido}`,
-            image: `${inputPreenchido}`,
-            owner: `${nomeUsuario}`,
-            author: `${nomeUsuario}`
-        }
-
-        const requisicao = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', dados)
-        requisicao.then(sucesso)
-        requisicao.catch(erro)
-
-        
+     
     }
     
+}
 
-    
- 
+function confirmarPedido(){
+
+    if(possuiClasse1 === true && possuiClasse2 === true && possuiClasse3 === true && inputPreenchido !== ""){
+    dados = {
+        model: `${modeloEscolhido}`,
+        neck: `${gola}`,
+        material: `${tecido}`,
+        image: `${inputPreenchido}`,
+        owner: `${nomeUsuario}`,
+        author: `${nomeUsuario}`
+    }
+
+    const requisicao = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', dados)
+    requisicao.then(trataresposta)
+    requisicao.catch(erro)
+
+    alert("COnfirmando pedido")
+    }
 }
 
 
 
     
 
- 
+/*  
 function sucesso(){
     alert("deu boa ")
-}
+} */
 
 function erro(){
-    alert("Ops, aconteceu um erro ! Verefique se a url da imgem esta correta")
+    alert("Ops, não conseguimos processar sua encomenda")
+}
+
+const promessa = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts")
+    promessa.then(trataresposta)
+
+
+
+
+
+function trataresposta(resposta){
+    const dadoSer = resposta.data
+    
+
+    const camisas = document.querySelector(".colecao")
+    for(let i = 0; i < dadoSer.length; i++){
+    camisas.innerHTML += `  <div class="card" onclick="pedido()">
+                                <img class="imgColecao" src="${dadoSer[i].image}">
+                                <h3>Criador: ${dadoSer[i].owner}</h3>
+                            </div>
+                            
+                `
+            }
+            
+}
+
+
+function pedido(){
+    confirm("Seu pedido é :" + gola)
+    
 }
