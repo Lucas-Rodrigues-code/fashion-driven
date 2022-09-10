@@ -78,10 +78,16 @@ body {
     height: 100px;
 
     background-color: #F2F2F2;;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     border-radius: 50%;
+    
+}
+
+img {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .titulo{
     width: 500px;
@@ -111,7 +117,7 @@ h2{
     margin-left: 120px;
     font-size: 18px;
     color: #232323;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .pedido{
@@ -120,6 +126,7 @@ h2{
 
     background-color: #FFFFFF;
     margin-left: 130px;
+    margin-top: 60px;
 }
 
 .confirmar{
@@ -190,3 +197,19 @@ input {
     background: #404EED;
 }
 
+.h1{
+    margin-top: 25px;
+    margin-left: 25px;
+    
+}
+.h1t{
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.img1{
+    margin-left: 10px;
+}
+.img2{
+    margin-left: 10px;
+    margin-top: 10px;
+}

@@ -17,46 +17,36 @@
         <div class="modelos">
             <h1 class="titulo1">Escolha o modelo</h1>
             <div class="escolha">
-                <div class="borda" onclick="modeloSelecionado(this)"><img src="/img/tshirt.png"/></div>
-                <div class="borda" onclick="modeloSelecionado(this)"><img src="/img/Camiseta.png"/></div>
-                <div class="borda" onclick="modeloSelecionado(this)"><img src="/img/Mangalonga.png"/></div>
+                <div class="borda" onclick="modeloSelecionado(this)">
+                    <img class="img2" src="/img/tshirt.png"/>
+                    <h1 class="h1t">T-shirt</h1>
+                </div>
+                <div class="borda" onclick="modeloSelecionado(this)"><img class="img2" src="/img/Camiseta.png"/><h1 class="h1t">Camiseta</h1></div>
+                <div class="borda" onclick="modeloSelecionado(this)"><img class="img2" src="/img/Mangalonga.png"/> <h1 class="h1t">Manga longa</h1></div>
             </div>
-            <div class="titulo">
-                <h1>T-shirt</h1>
-                <h1>Camiseta</h1>
-                <h1>Manga longa</h1>
-            </div>
+           
 <!--seção 2-->
             <h1 class="titulo1">Escolha a gola</h1>
             <div class="gola">
-                <div class="borda" onclick="golaSelecionada(this)"><img src="/img/GolaV.png"/></div>
-                <div class="borda" onclick="golaSelecionada(this)"><img src="/img/GolaRedonda.png"/></div>
-                <div class="borda" onclick="golaSelecionada(this)"><img src="/img/GolaPolo.png"/></div>
+                <div class="borda" onclick="golaSelecionada(this)"><img class="img1" src="/img/GolaV.png"/><h1 class="h1">Gola V</h1></div>
+                <div class="borda" onclick="golaSelecionada(this)"><img class="img1" src="/img/GolaRedonda.png"/><h1 class="h1">Gola Redonda</h1></div>
+                <div class="borda" onclick="golaSelecionada(this)"><img class="img1" src="/img/GolaPolo.png"/><h1 class="h1">Gola polo</h1></div>
             </div>
-            <div class="titulo">
-                <h1>T-shirt</h1>
-                <h1>Camiseta</h1>
-                <h1>Manga longa</h1>
-            </div>
+            
 <!--seção 3-->
             <h1 class="titulo1">Escolha o tecido</h1>
             <div class="tecido">
-                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Seda.png"/></div>
-                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Algodão.png"/></div>
-                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Poliester.png"/></div>
+                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Seda.png"/><h1 class="h1 o">Seda</h1></div>
+                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Algodão.png"/><h1 class="h1 o">Algodão</h1></div>
+                <div class="borda" onclick="tecidoSelecionado(this)"><img src="/img/Poliester.png"/><h1 class="h1 o">Poliéster</h1></div>
             </div>
-            <div class="titulo">
-                <h1 >T-shirt</h1>
-                <h1>Camiseta</h1>
-                <h1>Manga longa</h1>
-            </div>
-
+            
             <div class="pedido">
                 <h2>Imagem de referência</h2>
-                <input class="input" placeholder="Insira o link" />
+                <input class="input" placeholder="Insira o link" onchange="pegarMensagem(this)"  /> 
             </div>
             <div class="confirmar">
-                <h1 class="titulo-pedido" onclick="pegarMensagem()">Confirmar pedido</h1>
+                <h1 class="titulo-pedido" >Confirmar pedido</h1>
             </div>
             
         </div>
@@ -79,6 +69,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
