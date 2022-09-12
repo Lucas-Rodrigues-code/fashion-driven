@@ -13,6 +13,7 @@ let dados = {};
 
 
 function modeloSelecionado(escolhido){
+
     const modeloSelecionadoAnterior = document.querySelector(".escolha .selecionado")
 
     if(modeloSelecionadoAnterior !== null){
@@ -30,6 +31,7 @@ function modeloSelecionado(escolhido){
 }
 
 function golaSelecionada(golaEscolhida){
+
     const golaSelecionadoAnterior = document.querySelector(".gola .selecionado")
 
     if(golaSelecionadoAnterior !== null){
@@ -47,6 +49,7 @@ function golaSelecionada(golaEscolhida){
 }
 
 function tecidoSelecionado(tecidoEscolhido){
+
     const tecidoSelecionadoAnterior = document.querySelector(".tecido .selecionado")
 
     if(tecidoSelecionadoAnterior !== null){
@@ -76,9 +79,8 @@ function pegarMensagem(){
 }
 
 
-
-
 function liberarPedido(){
+
     if(modeloEscolhido === "Camiseta" )modeloEscolhido = "top-tank"
     if(modeloEscolhido === "T-shirt" )modeloEscolhido = "t-shirt" 
     if(modeloEscolhido === "Manga longa" )modeloEscolhido = "long"
@@ -115,23 +117,18 @@ function confirmarPedido(){
     const requisicao = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', dados)
     requisicao.then(trataPost)
     requisicao.catch(erro)
-
-   /*  alert("Confirmando pedido") */
     
-
     }
 }
 
 function trataPost(){
     alert("Confirmando pedido")
+
     const promessa = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts")
     promessa.then(trataresposta)
-    promessa.catch() 
-
+    promessa.catch(erro) 
    
-     
 }
-
 
 
 function erro(){
@@ -140,9 +137,6 @@ function erro(){
 
 const promessa = axios.get("https://mock-api.driven.com.br/api/v4/shirts-api/shirts")
 promessa.then(trataresposta) 
-
-
-
 
 
 function trataresposta(resposta){
@@ -184,7 +178,6 @@ function pedido(divCard){
         owner:divSpan.children[4].innerHTML
     }
 
-    console.log(infoPedidos)
     resultado = window.confirm(`Pedido criado por: ${infoPedidos.owner} 
     Modelo :${infoPedidos.modelo}
     Material :${infoPedidos.material}
@@ -214,9 +207,6 @@ function confirmarPedidoUsuario(infoPedidos){
     const requisicao = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', dados2)
     requisicao.then(trataPost)
     requisicao.catch(erro)
-
-   
-    
 
     
 }
