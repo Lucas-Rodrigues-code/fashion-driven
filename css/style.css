@@ -4,7 +4,7 @@ body {
 }
 
 .menu-logo{
-    width: auto;
+    width: 1366px;
     height: 89px;
 
     background: #404EED;
@@ -21,7 +21,7 @@ body {
 /* menu de escolhas */
 
 .conteudo{
-    width: auto;
+    width: 1366px;
     height: auto;
 
     background-color: red;
@@ -154,8 +154,9 @@ input {
 
 /*Pedidos do usuario*/
 
+
 .pedidos-usuario{
-    width: auto;
+    width: 1366px;
     height:  342px;
     background-color:  #F2F2F2;;
 }
@@ -224,4 +225,9 @@ input {
 
     margin-right: 25px;
     margin-bottom: 20px;
+}
+
+
+.escondido{
+    display: none;
 }
