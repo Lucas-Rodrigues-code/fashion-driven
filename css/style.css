@@ -1,10 +1,17 @@
 body {
     margin: 0;
+
     box-sizing: border-box;
+    background-color: #E5E5E5;
 }
 
+
+.tudo{
+    width: 100%;
+    height: 100%;
+}
 .menu-logo{
-    width: 1366px;
+    width: auto;
     height: 89px;
 
     background: #404EED;
@@ -21,12 +28,13 @@ body {
 /* menu de escolhas */
 
 .conteudo{
-    width: 1366px;
+    width: auto;
     height: auto;
 
-    background-color: red;
+   
 
     display: flex;
+    justify-content: center;
 }
 
 
@@ -118,7 +126,7 @@ h2{
 }
 
 .pedido{
-    width: 500px;
+    width: auto;
     height: 100px;
 
     background-color: #FFFFFF;
@@ -150,23 +158,33 @@ input {
 }
 
 /*Pedidos do usuario*/
+.pedidos-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding:0px 10px;
+    
 
+}
 
 .pedidos-usuario{
     width: 1366px;
     height:  342px;
-    background-color:  #F2F2F2;;
+    background-color:  #F2F2F2;
+    padding:0px 10px;
+
+    
 }
 .tituloPedido{
-    margin-left: 130px;
+    
     font-size: 24px;
     padding-top: 10px;
 }
 
 .colecao{
     margin-top: 10px;
-    margin-left: 130px;
-    width: 1000px;
+    
+    width: auto;
     height: auto;
 
     background-color: FFFFFF;
